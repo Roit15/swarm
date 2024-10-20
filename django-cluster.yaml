@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+ django-app:
+  image: roit15/todo-app:latest
+  ports:
+   - "8001:8001"
+
+ mysql-db:
+  image: mysql:latest
+  ports:
+   - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: test@123
